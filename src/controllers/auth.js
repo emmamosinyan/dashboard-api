@@ -3,8 +3,7 @@ const Joi = require("joi");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const jwtSecret =
-  "168c5b42971ceb557aadf079d734121ce7ba16cfe88367bf6d406f42dbf4f51bcf63ba";
+const jwtSecret = process.env.JWT_SECRET;
 
 const updateUserSchema = Joi.object({
   _id: Joi.string().required(),
